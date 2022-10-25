@@ -22,7 +22,7 @@
 //     }
 // }
 
-// interval = setInterval(displayWord, 400);
+// interval = setInterval(displayWord, 1000);
 
 // const typewriter = setInterval(function(){
 //     console.log (mot);
@@ -48,7 +48,7 @@
 //     console.log(typewriter);
 
 // }, 1000);
-
+// exo2
 // const b = document.body;
 // const h1 = document.createElement ('h1');
 // b.appendChild(h1);
@@ -71,3 +71,93 @@
 //     h1txt.innerHTML = "You have been on this page for" + secondes +"seconds.";
 // }
 // console.log (countSeconds)
+
+// let time = 0 ;
+// let dif = time - (time%60);
+// const timedisplayed = () => {
+//     if (time == 0){
+//         document.write('You are on this page for ' + time+' second');
+//     } else if (time <= 60) {
+//         document.write('You are on this page for '+ time+' seconds');
+//     }else {
+//         document.write('You are on this page for '+ time%60 + ' minutes and'+dif +'seconds')
+//     } document.write ('<br/>');
+//     time++;
+// }
+// setInterval (timedisplayed, 200)
+
+// const _initTime = Date.now()
+
+// const getElapsedTime = () => {
+//     return Number((Date.now() - _initTime) / 1000).toFixed(2) + 's'
+//   }
+//   console.log (getElapsedTime)
+
+
+
+//exo 3
+const b = document.body;
+const plateau = document.createElement('div');
+b.append(plateau);
+plateau.style.backgroundColor = 'white';
+plateau.style.width = "500px";
+plateau.style.height= '500px';
+plateau.style.display ='flex';
+plateau.style.border = 'solid 3px black';
+plateau.style.margin ='auto';
+plateau.style.flexWrap ='wrap';
+plateau.style.justifyContent ='space-between';
+plateau.style.alignItems='center'
+plateau.style.paddingLeft='50px';
+plateau.style.paddingRight='50px'
+plateau.style.paddingBottom='50px';
+plateau.style.paddingTop='30px'
+
+for (i=1; i <=12 ;i++){
+const cercle = document.createElement('button');
+plateau.appendChild(cercle);
+cercle.style.backgroundColor='white';
+cercle.style.display = 'flex';
+cercle.style.height ='120px';
+cercle.style.width= '120px';
+cercle.style.borderRadius= '50%';
+cercle.style.border = 'solid 2px black';
+
+}
+
+const score = document.createElement('div');
+plateau.appendChild(score);
+score.style.border ='solid 2px black';
+score.style.height ='60px';
+score.style.width= '80%';
+score.style.margin='auto';
+score.style.display='flex';
+score.style.justifyContent='space-around'
+
+
+const scoretxt = document.createElement('p')
+score.appendChild(scoretxt);
+scoretxt.innerText = 'Score = 2'
+scoretxt.style.color= 'red';
+
+
+
+// toute les X secondes, un cercle rouge se déplace parmis les douzes potentiels
+
+// quand un utilisateur clicke sur le cercle qui est rouge, le score augmente
+
+
+
+circles = document.querySelectorAll('button')
+
+
+setInterval(() => {
+   let actives =  document.querySelectorAll('.active')
+    actives.forEach((active) => {
+        active.style.backgroundColor = ""
+        active.classList.remove('active')
+    })
+    let edouard = Math.floor(Math.random() * 12)
+    circles[edouard].classList.add("active")
+    circles[edouard].style.background = "red"
+}, 1000)

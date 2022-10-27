@@ -134,11 +134,12 @@ score.style.margin='auto';
 score.style.display='flex';
 score.style.justifyContent='space-around'
 
-
+const points =0;
 const scoretxt = document.createElement('p')
 score.appendChild(scoretxt);
-scoretxt.innerText = 'Score = 2'
-scoretxt.style.color= 'red';
+scoretxt.innerText = 'Score : '+ points;
+scoretxt.style.color= 'Black';
+
 
 
 
@@ -148,16 +149,43 @@ scoretxt.style.color= 'red';
 
 
 
-circles = document.querySelectorAll('button')
+// circles = document.querySelectorAll('button')
 
 
-setInterval(() => {
-   let actives =  document.querySelectorAll('.active')
-    actives.forEach((active) => {
-        active.style.backgroundColor = ""
-        active.classList.remove('active')
-    })
-    let edouard = Math.floor(Math.random() * 12)
-    circles[edouard].classList.add("active")
-    circles[edouard].style.background = "red"
-}, 1000)
+// setInterval(() => {
+//    let actives =  document.querySelectorAll('.active')
+//     actives.forEach((active) => {
+//         active.style.backgroundColor = "white"
+//         active.classList.remove('active')
+//     })
+//     let edouard = Math.floor(Math.random() * 12)
+//     circles[edouard].classList.add("active")
+//     circles[edouard].style.background = "red"
+// }, 1000)
+
+
+// circles.forEach((cercle) =>
+// // console.log(cercle)
+// cercle.addEventListener ('clik', (e)=>
+// console.log(target))
+   
+
+// )
+// const tapMole = (e) => {
+//     if(e.target.style.backgroundColor == "red") {
+//         scoreNumber++;
+//         score.innerText = scoreNumber;
+//     }
+// };
+
+// for(const mole of moles) {
+//     mole.addEventListener("click", tapMole);
+// }
+
+// const resetScore = () => {
+//     scoreNumber = 0;
+//     score.innerText = scoreNumber;
+// };
+
+// const resetScoreButton = document.getElementById("reset-score-button");
+// resetScoreButton.addEventListener("click", resetScore);

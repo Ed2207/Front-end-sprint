@@ -1,0 +1,56 @@
+
+body {
+    background-color: 	#E0E0E0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.maincontainer {
+    display :flex;
+    justify-content: space-around;
+    height: 500px;
+    align-items: center;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    background-color: #C00000 ;
+    height: 400px;
+    width: 350px;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 15%;
+}
+
+.day {
+    font-size: xxx-large;
+    color: white;
+    
+    
+
+
+}
+
+.date {
+    font-size: xxx-large;
+    background-color: white;
+    width: 100%;
+    margin: 0;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.year {
+    font-size: xxx-large;
+    color: white;
+}
+.hours {
+    
+}
+.currenthour {
+    font-size: 100px;
+}

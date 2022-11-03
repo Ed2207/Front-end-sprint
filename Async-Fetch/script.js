@@ -46,17 +46,42 @@
 
 // Exo 2
 
+// const button = document.querySelector('button');
+
+// button.addEventListener('click', () => {
+//     const alé = document.querySelector('input').value;
+//     console.log('https://api.agify.io/?name=' + alé)
+//     fetch('https://api.agify.io/?name=' + alé )
+//         .then(response => response.json())
+//         .then(nom => {
+//             console.log(nom)
+            
+//         })
+//         .catch(error => {
+//             console.log('There was an error!', error)
+//         })
+// })
+
+// Step select 
+
 const button = document.querySelector('button');
 
+    // console.log (selection)
+
 button.addEventListener('click', () => {
+    
     const alé = document.querySelector('input').value;
-    console.log('https://api.agify.io/?name=' + alé)
-    fetch('https://api.agify.io/?name=' + alé )
+    const selection = document.querySelector('select').value;
+
+    console.log('https://api.agify.io?name=&country_id=' + selection + alé)
+        fetch('https://api.agify.io?name=michael&country_id=US' + selection + alé)
         .then(response => response.json())
         .then(nom => {
             console.log(nom)
+
             
-        })
+        }
+        )
         .catch(error => {
             console.log('There was an error!', error)
         })

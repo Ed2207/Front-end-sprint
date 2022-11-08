@@ -1,6 +1,51 @@
+body {
+    background-color: EBF2FA ;
+}
+
+
+
+
+
 h1 {
     font-family: poppins ;
 }
 h2 {
     font-family: poppins ;
+}
+
+#cityName {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    margin: auto;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+
+#city {
+    text-align: center;
+    font-family: poppins ;
+    border: 0;
+    width: 300pt;
+    font-size: large;
+}
+#search {
+    background-color: 064789;
+    color: white;
+    font-family: poppins ;
+    border: 0;
+    width: 100px;
+}
+.day {
+    background-color: 427AA1;
+    font-family: poppins ;
+    color: white;
+    text-align: center;
+
 }
